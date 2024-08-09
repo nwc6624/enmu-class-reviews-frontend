@@ -1,0 +1,17 @@
+.discussions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+  
+  .discussion-card {
+    border: 1px solid #ccc;
+    padding: 16px;
+    width: 200px;
+    cursor: pointer;
+  }
+  
+  .discussion-card:hover {
+    background-color: #f0f0f0;
+  }
+  
