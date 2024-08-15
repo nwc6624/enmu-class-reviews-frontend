@@ -18,10 +18,36 @@ const About = () => {
         boxSizing: 'border-box',
       }}
     >
-      <Box>
-        <Typography variant="h4" gutterBottom>About ENMU Class Reviews</Typography>
-        <Typography variant="body1">
-          This platform allows students to post reviews about their classes and participate in discussions.
+      <Box
+        sx={{
+          backgroundColor: 'rgba(255, 255, 255, 0.85)',
+          padding: '30px',
+          borderRadius: '10px',
+          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+          maxWidth: '800px',
+          margin: 'auto',
+          textAlign: 'center',
+        }}
+      >
+        <Typography 
+          variant="h3" 
+          gutterBottom 
+          sx={{
+            fontWeight: 'bold',
+            color: '#2E3B55', 
+            borderBottom: '3px solid #2E3B55',
+            display: 'inline-block',
+            paddingBottom: '10px',
+            marginBottom: '20px',
+          }}
+        >
+          About ENMU Class Reviews
+        </Typography>
+        <Typography variant="body1" paragraph>
+          Eastern New Mexico University (ENMU) is a public university with its main campus in Portales, New Mexico, and two additional campuses in Ruidoso and Roswell. Established in 1934, ENMU is the largest regional comprehensive university in New Mexico and serves a diverse student body as a federally designated Hispanic-serving institution.
+        </Typography>
+        <Typography variant="body1" paragraph>
+          This platform allows students to share reviews and participate in discussions about their classes, helping to create a community-driven resource for current and future students of ENMU.
         </Typography>
       </Box>
 
