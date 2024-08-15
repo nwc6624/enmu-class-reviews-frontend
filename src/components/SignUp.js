@@ -25,43 +25,100 @@ const SignUp = () => {
   };
 
   return (
-    <Container>
-      <Box my={4}>
-        <Typography variant="h4" gutterBottom>Sign Up</Typography>
-        {message && <Typography color="error">{message}</Typography>}
-        <form onSubmit={handleSubmit}>
-          <TextField
-            fullWidth
-            margin="normal"
-            label="Username"
-            name="username"
-            value={user.username}
-            onChange={handleChange}
-            required
-          />
-          <TextField
-            fullWidth
-            margin="normal"
-            label="Email"
-            name="email"
-            value={user.email}
-            onChange={handleChange}
-            required
-          />
-          <TextField
-            fullWidth
-            margin="normal"
-            label="Password"
-            type="password"
-            name="password"
-            value={user.password}
-            onChange={handleChange}
-            required
-          />
-          <Button type="submit" variant="contained" color="primary">Sign Up</Button>
-        </form>
+    <Box
+      sx={{
+        backgroundImage: `url(${require('../assets/ENMU_Mascot_Logo_Cornered.png')})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        padding: '20px',
+        boxSizing: 'border-box',
+      }}
+    >
+      <Container maxWidth="sm">
+        <Box my={4}>
+          <Typography variant="h4" gutterBottom>Sign Up</Typography>
+          {message && <Typography color="error">{message}</Typography>}
+          <form onSubmit={handleSubmit}>
+            <TextField
+              fullWidth
+              margin="normal"
+              label="Username"
+              name="username"
+              value={user.username}
+              onChange={handleChange}
+              required
+            />
+            <TextField
+              fullWidth
+              margin="normal"
+              label="Email"
+              name="email"
+              value={user.email}
+              onChange={handleChange}
+              required
+            />
+            <TextField
+              fullWidth
+              margin="normal"
+              label="Password"
+              type="password"
+              name="password"
+              value={user.password}
+              onChange={handleChange}
+              required
+            />
+            <Box 
+              sx={{
+                backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                borderRadius: '10px',
+                padding: '10px',
+                marginBottom: '16px',
+                boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+                textAlign: 'center',
+              }}
+            >
+              <Typography variant="body2" sx={{ fontWeight: 'bold' }}>
+                Note: Only accounts registered with an @enmu.edu email address will be considered a verified account for reviews.
+              </Typography>
+            </Box>
+            <Button type="submit" variant="contained" color="primary" fullWidth>
+              Sign Up
+            </Button>
+          </form>
+        </Box>
+      </Container>
+      
+      <Box 
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          padding: '20px',
+          backgroundColor: 'rgba(255, 255, 255, 0.8)',
+          borderRadius: '10px',
+          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+          marginTop: 'auto',
+          marginBottom: '20px',
+          maxWidth: '600px',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          textAlign: 'center',
+        }}
+      >
+        <Typography variant="body2">
+          The official unofficial review page for Eastern New Mexico University. Created by students, for students.
+        </Typography>
+        <Typography variant="body2" sx={{ marginLeft: 'auto' }}>
+          &copy; 2024
+        </Typography>
       </Box>
-    </Container>
+    </Box>
   );
 };
 
