@@ -53,7 +53,14 @@ const ReviewDetail = () => {
       <Typography variant="body1">Teaching Quality: {review.teachingQuality}</Typography>
       <Typography variant="body1">Mode: {review.onlineOrInPerson}</Typography>
       <Typography variant="body1">Comment: {review.comment}</Typography>
-      <Button variant="contained" color="primary" onClick={() => navigate('/reviews')} sx={{ marginTop: '20px' }}>
+      <Button 
+        variant="contained" 
+        color="primary" 
+        onClick={() => {
+          navigate('/');
+          window.location.reload();
+        }} 
+        sx={{ marginTop: '20px' }}>
         Back to Reviews
       </Button>
     </Box>
