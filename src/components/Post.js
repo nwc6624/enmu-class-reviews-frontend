@@ -80,94 +80,143 @@ const Post = () => {
   };
 
   return (
-    <Container>
-      <Box my={4}>
-        <Typography variant="h4" gutterBottom>Post a Review</Typography>
-        {message && <Typography color="error">{message}</Typography>}
-        <form onSubmit={handleSubmit}>
-          <TextField
-            fullWidth
-            margin="normal"
-            label="Class Title"
-            name="classTitle"
-            value={review.classTitle}
-            onChange={handleChange}
-            required
-          />
-          <TextField
-            fullWidth
-            margin="normal"
-            label="Instructor Name (Or N/A if not sure)"
-            name="instructorName"
-            value={review.instructorName}
-            onChange={handleChange}
-            required
-          />
-          <TextField
-            fullWidth
-            margin="normal"
-            label="Semester Taken"
-            name="semester"
-            value={review.semester}
-            onChange={handleChange}
-            required
-          />
-          <Box my={2}>
-            <FormLabel component="legend">Rating</FormLabel>
-            <Rating
-              name="rating"
-              value={review.rating}
-              onChange={handleRatingChange}
+    <Box
+      sx={{
+        backgroundImage: `url(${require('../assets/ENMU_Mascot_Logo_Cornered.png')})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundAttachment: 'fixed',
+        minHeight: '100vh',
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-between',
+        padding: '20px',
+        boxSizing: 'border-box',
+      }}
+    >
+      <Container maxWidth="sm">
+        <Box my={4}>
+          <Typography variant="h4" gutterBottom>Post a Review</Typography>
+          {message && <Typography color="error">{message}</Typography>}
+          <form onSubmit={handleSubmit}>
+            <TextField
+              fullWidth
+              margin="normal"
+              label="Class Title"
+              name="classTitle"
+              value={review.classTitle}
+              onChange={handleChange}
               required
+              InputLabelProps={{ style: { fontWeight: 'bold' } }}
             />
-          </Box>
-          <Box my={2}>
-            <FormControl component="fieldset">
-              <FormLabel component="legend">Workload</FormLabel>
-              <RadioGroup row name="workload" value={review.workload} onChange={handleWorkloadChange}>
-                <FormControlLabel value="light" control={<Radio sx={{ color: 'green' }} />} label="Light" />
-                <FormControlLabel value="moderate" control={<Radio sx={{ color: 'yellow' }} />} label="Moderate" />
-                <FormControlLabel value="heavy" control={<Radio sx={{ color: 'red' }} />} label="Heavy" />
-              </RadioGroup>
-            </FormControl>
-          </Box>
-          <Box my={2}>
-            <FormLabel component="legend">Teaching Quality</FormLabel>
-            <Rating
-              name="teachingQuality"
-              value={review.teachingQuality}
-              onChange={handleTeachingQualityChange}
+            <TextField
+              fullWidth
+              margin="normal"
+              label="Instructor Name (Or N/A if not sure)"
+              name="instructorName"
+              value={review.instructorName}
+              onChange={handleChange}
               required
+              InputLabelProps={{ style: { fontWeight: 'bold' } }}
             />
-          </Box>
-          <Box my={2}>
-            <FormControl component="fieldset">
-              <FormLabel component="legend">Online or In-Person</FormLabel>
-              <RadioGroup row name="onlineOrInPerson" value={review.onlineOrInPerson} onChange={handleOnlineOrInPersonChange}>
-                <FormControlLabel value="online" control={<Radio />} label="Online" />
-                <FormControlLabel value="in-person" control={<Radio />} label="In-Person" />
-              </RadioGroup>
-            </FormControl>
-          </Box>
-          <TextField
-            fullWidth
-            margin="normal"
-            label="Comment (120 characters max)"
-            name="comment"
-            value={review.comment}
-            onChange={handleChange}
-            inputProps={{ maxLength: 120 }}
-            required
-          />
-          <FormControlLabel
-            control={<Checkbox checked={review.anonymous} onChange={handleAnonymousChange} />}
-            label="Post Anonymously"
-          />
-          <Button type="submit" variant="contained" color="primary">Submit Review</Button>
-        </form>
+            <TextField
+              fullWidth
+              margin="normal"
+              label="Semester Taken"
+              name="semester"
+              value={review.semester}
+              onChange={handleChange}
+              required
+              InputLabelProps={{ style: { fontWeight: 'bold' } }}
+            />
+            <Box my={2}>
+              <FormLabel component="legend" sx={{ fontWeight: 'bold' }}>Rating</FormLabel>
+              <Rating
+                name="rating"
+                value={review.rating}
+                onChange={handleRatingChange}
+                required
+              />
+            </Box>
+            <Box my={2}>
+              <FormControl component="fieldset">
+                <FormLabel component="legend" sx={{ fontWeight: 'bold' }}>Workload</FormLabel>
+                <RadioGroup row name="workload" value={review.workload} onChange={handleWorkloadChange}>
+                  <FormControlLabel value="light" control={<Radio sx={{ color: 'green' }} />} label="Light" />
+                  <FormControlLabel value="moderate" control={<Radio sx={{ color: 'yellow' }} />} label="Moderate" />
+                  <FormControlLabel value="heavy" control={<Radio sx={{ color: 'red' }} />} label="Heavy" />
+                </RadioGroup>
+              </FormControl>
+            </Box>
+            <Box my={2}>
+              <FormLabel component="legend" sx={{ fontWeight: 'bold' }}>Teaching Quality</FormLabel>
+              <Rating
+                name="teachingQuality"
+                value={review.teachingQuality}
+                onChange={handleTeachingQualityChange}
+                required
+              />
+            </Box>
+            <Box my={2}>
+              <FormControl component="fieldset">
+                <FormLabel component="legend" sx={{ fontWeight: 'bold' }}>Online or In-Person</FormLabel>
+                <RadioGroup row name="onlineOrInPerson" value={review.onlineOrInPerson} onChange={handleOnlineOrInPersonChange}>
+                  <FormControlLabel value="online" control={<Radio />} label="Online" />
+                  <FormControlLabel value="in-person" control={<Radio />} label="In-Person" />
+                </RadioGroup>
+              </FormControl>
+            </Box>
+            <TextField
+              fullWidth
+              margin="normal"
+              label="Comment (120 characters max)"
+              name="comment"
+              value={review.comment}
+              onChange={handleChange}
+              inputProps={{ maxLength: 120 }}
+              required
+              InputLabelProps={{ style: { fontWeight: 'bold' } }}
+            />
+            <FormControlLabel
+              control={<Checkbox checked={review.anonymous} onChange={handleAnonymousChange} />}
+              label="Post Anonymously"
+              sx={{ fontWeight: 'bold' }}
+            />
+            <Button type="submit" variant="contained" color="primary" fullWidth sx={{ fontWeight: 'bold' }}>
+              Submit Review
+            </Button>
+          </form>
+        </Box>
+      </Container>
+
+      <Box 
+        sx={{
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          padding: '20px',
+          backgroundColor: 'rgba(255, 255, 255, 0.8)',
+          borderRadius: '10px',
+          boxShadow: '0px 4px 10px rgba(0, 0, 0, 0.1)',
+          marginTop: 'auto',
+          marginBottom: '20px',
+          maxWidth: '600px',
+          marginLeft: 'auto',
+          marginRight: 'auto',
+          textAlign: 'center',
+        }}
+      >
+        <Typography variant="body2">
+          The official unofficial review page for Eastern New Mexico University. Created by students, for students.
+        </Typography>
+        <Typography variant="body2" sx={{ marginLeft: 'auto' }}>
+          &copy; 2024
+        </Typography>
       </Box>
-    </Container>
+    </Box>
   );
 };
 
 export default Post;
+
