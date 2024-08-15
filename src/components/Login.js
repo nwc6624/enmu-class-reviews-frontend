@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 import { Container, TextField, Button, Typography, Box } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import authService from '../services/authService';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import TwitterIcon from '@mui/icons-material/Twitter';
 
 const Login = () => {
   const [username, setUsername] = useState(''); 
@@ -40,6 +43,7 @@ const Login = () => {
         justifyContent: 'space-between',
         padding: '20px',
         boxSizing: 'border-box',
+        position: 'relative',
       }}
     >
       <Container maxWidth="sm">
@@ -86,6 +90,7 @@ const Login = () => {
           marginLeft: 'auto',
           marginRight: 'auto',
           textAlign: 'center',
+          position: 'relative',
         }}
       >
         <Typography variant="body2">
@@ -94,6 +99,33 @@ const Login = () => {
         <Typography variant="body2" sx={{ marginLeft: 'auto' }}>
           &copy; 2024
         </Typography>
+      </Box>
+
+      <Box
+        sx={{
+          position: 'absolute',
+          bottom: '20px',
+          left: '20px',
+          display: 'flex',
+          gap: '20px',
+        }}
+      >
+        <a href="https://www.enmu.edu/" target="_blank" rel="noopener noreferrer">
+          <img 
+            src={require('../assets/ENMUOldLogo.png')} 
+            alt="ENMU Old Logo" 
+            style={{ width: '40px', height: '40px' }} 
+          />
+        </a>
+        <a href="https://www.instagram.com/enmu/" target="_blank" rel="noopener noreferrer">
+          <InstagramIcon sx={{ color: 'green', fontSize: '40px' }} />
+        </a>
+        <a href="https://x.com/enmu" target="_blank" rel="noopener noreferrer">
+          <TwitterIcon sx={{ color: 'green', fontSize: '40px' }} />
+        </a>
+        <a href="https://www.facebook.com/goenmu/" target="_blank" rel="noopener noreferrer">
+          <FacebookIcon sx={{ color: 'green', fontSize: '40px' }} />
+        </a>
       </Box>
     </Box>
   );
