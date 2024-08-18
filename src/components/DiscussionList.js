@@ -7,7 +7,7 @@ const API_URL = 'http://127.0.0.1:5000/api';
 
 const DiscussionList = () => {
   const [discussions, setDiscussions] = useState([]);
-  const [newDiscussion, setNewDiscussion] = useState('');
+  const [newDiscussionTitle, setNewDiscussionTitle] = useState(''); // Changed from newDiscussion to newDiscussionTitle
   const [newContent, setNewContent] = useState('');
 
   useEffect(() => {
@@ -28,10 +28,10 @@ const DiscussionList = () => {
     try {
       await axios.post(
         `${API_URL}/discussions`,
-        { topic: newDiscussion, content: newContent },
+        { title: newDiscussionTitle, content: newContent, user_id: user.id }, // Ensuring 'title' is sent
         { headers: { Authorization: `Bearer ${user.token}` } }
       );
-      setNewDiscussion('');
+      setNewDiscussionTitle(''); // Clear the title input after posting
       setNewContent('');
       const response = await axios.get(`${API_URL}/discussions`);
       setDiscussions(response.data);
@@ -46,9 +46,9 @@ const DiscussionList = () => {
         <Typography variant="h4" gutterBottom>Discussions</Typography>
         <Box my={4}>
           <TextField
-            label="Discussion Topic"
-            value={newDiscussion}
-            onChange={(e) => setNewDiscussion(e.target.value)}
+            label="Discussion Title"
+            value={newDiscussionTitle} // Changed to use newDiscussionTitle
+            onChange={(e) => setNewDiscussionTitle(e.target.value)} // Changed to setNewDiscussionTitle
             fullWidth
             margin="normal"
           />
@@ -68,7 +68,7 @@ const DiscussionList = () => {
         <Box my={4}>
           {discussions.map((discussion) => (
             <Paper key={discussion.id} elevation={3} style={{ marginBottom: '16px', padding: '16px' }}>
-              <Typography variant="h6">{discussion.topic}</Typography>
+              <Typography variant="h6">{discussion.title}</Typography>
               <Typography variant="body1" color="textSecondary" style={{ marginBottom: '8px' }}>
                 {discussion.content}
               </Typography>
