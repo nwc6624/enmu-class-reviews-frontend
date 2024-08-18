@@ -3,18 +3,29 @@ import axios from 'axios';
 import authService from '../services/authService';
 import './styles.css';
 
-
 const Discussion = () => {
   const [discussions, setDiscussions] = useState([]);
-  const [newDiscussion, setNewDiscussion] = useState({ topic: '', content: '' });
+  const [newDiscussion, setNewDiscussion] = useState({ title: '', content: '' });
   const [selectedDiscussion, setSelectedDiscussion] = useState(null);
   const [newComment, setNewComment] = useState('');
 
   useEffect(() => {
     const fetchDiscussions = async () => {
-      const response = await axios.get('http://127.0.0.1:5000/api/discussions');
-      setDiscussions(response.data);
+      try {
+        const response = await axios.get(`${API_URL}/discussions`, {
+          headers: {
+            'Accept': 'application/json',  // Explicitly specify the accepted response format
+          }
+        });
+        setDiscussions(response.data);
+      } catch (error) {
+        console.error('Error fetching discussions:', error.response ? error.response.data : error.message);
+      }
     };
+  
+    fetchDiscussions();
+  }, []);
+  
 
     fetchDiscussions();
   }, []);
@@ -32,15 +43,15 @@ const Discussion = () => {
     }
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/api/discussions', newDiscussion, {
+      const response = await axios.post('http://127.0.0.1:5000/api/discussions', { ...newDiscussion, user_id: user.id }, {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },
       });
       setDiscussions([...discussions, response.data.discussion]);
-      setNewDiscussion({ topic: '', content: '' });
+      setNewDiscussion({ title: '', content: '' });
     } catch (error) {
-      console.error(error);
+      console.error('Error creating discussion:', error);
     }
   };
 
@@ -57,7 +68,7 @@ const Discussion = () => {
     }
 
     try {
-      await axios.post(`http://127.0.0.1:5000/api/discussions/${selectedDiscussion.id}/comments`, { content: newComment }, {
+      await axios.post(`http://127.0.0.1:5000/api/discussions/${selectedDiscussion.id}/comments`, { content: newComment, user_id: user.id }, {
         headers: {
           Authorization: `Bearer ${user.token}`,
         },
@@ -70,7 +81,7 @@ const Discussion = () => {
       setSelectedDiscussion(updatedDiscussion);
       setNewComment('');
     } catch (error) {
-      console.error(error);
+      console.error('Error adding comment:', error);
     }
   };
 
@@ -79,7 +90,7 @@ const Discussion = () => {
       const response = await axios.get(`http://127.0.0.1:5000/api/discussions/${discussionId}/comments`);
       setSelectedDiscussion({ ...discussions.find(d => d.id === discussionId), comments: response.data });
     } catch (error) {
-      console.error(error);
+      console.error('Error fetching comments:', error);
     }
   };
 
@@ -89,9 +100,9 @@ const Discussion = () => {
       <form onSubmit={handleDiscussionSubmit}>
         <input
           type="text"
-          name="topic"
-          placeholder="Topic"
-          value={newDiscussion.topic}
+          name="title"
+          placeholder="Title"
+          value={newDiscussion.title}
           onChange={handleDiscussionChange}
           required
         />
@@ -107,24 +118,32 @@ const Discussion = () => {
 
       <div>
         <h3>All Discussions</h3>
-        {discussions.map(discussion => (
-          <div key={discussion.id} onClick={() => fetchComments(discussion.id)}>
-            <h4>{discussion.topic}</h4>
-            <p>{discussion.content}</p>
-            <p>Posted by {discussion.username} on {new Date(discussion.timestamp).toLocaleString()}</p>
-          </div>
-        ))}
+        {discussions.length === 0 ? (
+          <p>No discussions available</p>
+        ) : (
+          discussions.map(discussion => (
+            <div key={discussion.id} onClick={() => fetchComments(discussion.id)}>
+              <h4>{discussion.title}</h4>
+              <p>{discussion.content}</p>
+              <p>Posted by {discussion.username} on {new Date(discussion.timestamp).toLocaleString()}</p>
+            </div>
+          ))
+        )}
       </div>
 
       {selectedDiscussion && (
         <div>
-          <h3>Comments for {selectedDiscussion.topic}</h3>
-          {selectedDiscussion.comments.map(comment => (
-            <div key={comment.id}>
-              <p>{comment.content}</p>
-              <p>Comment by {comment.username} on {new Date(comment.timestamp).toLocaleString()}</p>
-            </div>
-          ))}
+          <h3>Comments for {selectedDiscussion.title}</h3>
+          {selectedDiscussion.comments.length === 0 ? (
+            <p>No comments yet</p>
+          ) : (
+            selectedDiscussion.comments.map(comment => (
+              <div key={comment.id}>
+                <p>{comment.content}</p>
+                <p>Comment by {comment.username} on {new Date(comment.timestamp).toLocaleString()}</p>
+              </div>
+            ))
+          )}
           <form onSubmit={handleCommentSubmit}>
             <textarea
               placeholder="Add a comment"
