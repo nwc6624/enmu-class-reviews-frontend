@@ -1,5 +1,8 @@
 # ENMU Class Reviews Frontend
+<img src="https://github.com/user-attachments/assets/b2d1f3f8-be68-4426-a73b-f286a0f5bd8f" alt="logo" height="230">  
+<img src="https://github.com/user-attachments/assets/ed5d70a8-25ee-4719-bebd-3f0a7cc88f4c" alt="ENMUOldLogo" height="230">
 
+ <br/>
 This is the frontend for the ENMU Class Reviews application. It allows users to sign up, log in, create posts, view all posts, view discussions, and participate in discussions about classes.
 
 ## Table of Contents
