@@ -12,6 +12,7 @@ This is the frontend for the ENMU Class Reviews application. It allows users to 
 - [Dependencies](#dependencies)
 - [Contributing](#contributing)
 - [License](#license)
+- [Screenshots](#screenshots)
 
 ## Prerequisites
 
@@ -134,3 +135,18 @@ Contributions are welcome! Please feel free to submit a Pull Request.   <br/>
 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.  <br/>
+
+## Screenshots
+
+Included are images from 8/21/24. Current UI subject to change. <br/>
+![image](https://github.com/user-attachments/assets/b6a3b065-bbb1-4c20-9a6b-060a727004b9)   **Homepage with demo data.** <br/>
+![image](https://github.com/user-attachments/assets/c3c1657b-5576-41fb-9c3d-0de3991f85b2)   **Course Review Page.** <br/>
+![image](https://github.com/user-attachments/assets/a622030c-40ed-4820-9d73-7325e24c3dec)   **Logged in user's options menu.** <br/>
+![image](https://github.com/user-attachments/assets/ba9b628e-8122-4ed3-8321-971a2bc16de8)   **Top of the "About" page.** <br/>
+![image](https://github.com/user-attachments/assets/45b835e8-2139-468d-b53f-f9b34b38a822)   **Bottom of the "About" page.**  <br/>
+
+
+
+
+
+
