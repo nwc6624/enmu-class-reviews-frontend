@@ -38,38 +38,38 @@ This will start the development server and open the application in your default 
 (NOTE: Front end components have been updated since 1.1)
  
 **enmu-class-reviews/** <br/>
-**├── backend/    **    <br/> 
-**│   ├── app/  **      <br/>   
-**│   │   ├── __init__.py        **  # Initializes the Flask <br/>   application and its configurations. <br\>
-**│   │   ├── models.py          **  # Contains the database models for the application.   <br/>
-**│   │   ├── routes.py          **  # Defines the API routes for the application. <br/>
-**│   │   ├── config.py         **   # Contains configuration settings for the application. <br/>
-**│   ├── migrations/             ** # Contains database migration files. <br/>
-**│   ├── .env                  **   # Environment variables for the backend. <br/>
-**│   ├── app.py              **     # The entry point for the Flask application. <br/>
-**│   ├── requirements.txt  **         # Lists the Python dependencies for the backend. <br/>
-**│   ├── wsgi.py      **            # WSGI entry point for deployment. <br/>
+**├── backend/**    <br/> 
+**│   ├── app/**      <br/>   
+**│   │   ├── __init__.py**  # Initializes the Flask <br/>   application and its configurations. <br\>
+**│   │   ├── models.py**  # Contains the database models for the application.   <br/>
+**│   │   ├── routes.py**  # Defines the API routes for the application. <br/>
+**│   │   ├── config.py**   # Contains configuration settings for the application. <br/>
+**│   ├── migrations/** # Contains database migration files. <br/>
+**│   ├── .env**   # Environment variables for the backend. <br/>
+**│   ├── app.py**     # The entry point for the Flask application. <br/>
+**│   ├── requirements.txt**         # Lists the Python dependencies for the backend. <br/>
+**│   ├── wsgi.py**            # WSGI entry point for deployment. <br/>
 
-**├── frontend/                    ** # enmu-class-reviews-frontend/<br/>
-**│   ├── public/                 ** # Contains the static assets for the application. <br/>
-**│   │   ├── index.html          ** # The main HTML file for the application. <br/>
-**│   ├── src/                    ** # Contains the source code for the application.  <br/>
-**│   │   ├── components/         ** # Contains the React components for the application.  <br/>
-**│   │   │   ├── SignUp.js       ** # Component for user sign-up. <br/>
-**│   │   │   ├── Login.js        ** # Component for user login. <br/>
-**│   │   │   ├── Post.js         ** # Component for displaying individual posts. <br/>
-**│   │   │   ├── Discussion.js  **  # Component for displaying discussion threads.  <br/>
-**│   │   │   ├── NavBar.js     **   # Component for the navigation bar.  <br/>
-**│   │   ├── pages/               ** # Contains the React components for different pages.  <br/>
-**│   │   │   ├── Home.js        **  # Home page component.   <br/>
-**│   │   │   ├── About.js     **    # About page component. <br/>
-**│   │   ├── services/           ** # Contains the service modules  for API calls. <br/>
+**├── frontend/** # enmu-class-reviews-frontend/<br/>
+**│   ├── public/** # Contains the static assets for the application. <br/>
+**│   │   ├── index.html** # The main HTML file for the application. <br/>
+**│   ├── src/** # Contains the source code for the application.  <br/>
+**│   │   ├── components/** # Contains the React components for the application.  <br/>
+**│   │   │   ├── SignUp.js** # Component for user sign-up. <br/>
+**│   │   │   ├── Login.js** # Component for user login. <br/>
+**│   │   │   ├── Post.js** # Component for displaying individual posts. <br/>
+**│   │   │   ├── Discussion.js**  # Component for displaying discussion threads.  <br/>
+**│   │   │   ├── NavBar.js**   # Component for the navigation bar.  <br/>
+**│   │   ├── pages/** # Contains the React components for different pages.  <br/>
+**│   │   │   ├── Home.js**  # Home page component.   <br/>
+**│   │   │   ├── About.js**    # About page component. <br/>
+**│   │   ├── services/** # Contains the service modules  for API calls. <br/>
 **│   │   │   ├── authService.js**   # Service module for authentication-related API calls. <br/>
-**│   │   ├── App.js          **     # The main component that sets up the routing. <br/>
-**│   │   ├── index.js      **       # The entry point for the React application. <br/>
-**│   ├── package.json       **      # Contains the dependencies and scripts for the frontend. <br/>
-**│   ├── package-lock.json  **      # Lockfile for ensuring consistent installations. <br/>
-**│   ├── .env    **                 # Environment variables for the frontend. <br/>
+**│   │   ├── App.js**     # The main component that sets up the routing. <br/>
+**│   │   ├── index.js**       # The entry point for the React application. <br/>
+**│   ├── package.json**      # Contains the dependencies and scripts for the frontend. <br/>
+**│   ├── package-lock.json**      # Lockfile for ensuring consistent installations. <br/>
+**│   ├── .env**                 # Environment variables for the frontend. <br/>
 
 
 **public/:** Contains the static assets for the application. <br/>
@@ -79,16 +79,17 @@ This will start the development server and open the application in your default 
 **services/:** Contains the service modules for API calls. <br/>
 **App.js:** The main component that sets up the routing. <br/>
 **index.js:** The entry point for the React application. <br/>
+
 ## Available Scripts
 In the project directory, you can run:
 
-npm start: Runs the app in the development mode. <br/>
-npm build: Builds the app for production to the build folder. <br/>
-npm test: Launches the test runner in the interactive watch mode. <br/>
-npm eject: Removes the single build dependency from your project. <br/> 
+**npm start:** Runs the app in the development mode. <br/>
+**npm build:** Builds the app for production to the build folder. <br/>
+**npm test:** Launches the test runner in the interactive watch mode. <br/>
+**npm eject:** Removes the single build dependency from your project. <br/> 
  Note: this is a one-way operation. Once you eject, you can’t go back!  <br/>
 
-Dependencies
+## Dependencies
 This project uses the following dependencies:
 
 axios: For making HTTP requests.  <br/>
