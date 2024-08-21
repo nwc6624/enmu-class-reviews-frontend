@@ -1,0 +1,10 @@
+TO DO 8/21/2024
+
+- fix discussion "Invalid date"
+-clean out back end server of demo content
+- University email authentication vs unverified address 
+- -Fix benig able to delete discussions/comments
+- better chat ui? 
+
+-push backend into demo production server for testing (Pythonanywhere, azure, aws etc...)
+-Domain purchase via cloudflare 
