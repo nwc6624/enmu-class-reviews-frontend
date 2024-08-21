@@ -29,7 +29,7 @@ To get started with the project, follow these steps:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/enmu-class-reviews-frontend.git
+   git clone https://github.com/nwc6624/enmu-class-reviews-frontend.git
    cd enmu-class-reviews-frontend
    
 Install the dependencies:
@@ -128,6 +128,9 @@ This project uses the following dependencies:
 **react-router-dom**: Provides DOM bindings for React Router.
 Contributing   <br/>
 Contributions are welcome! Please feel free to submit a Pull Request.   <br/>
+## Contributing 
+**Author**: - [@nwc6624](https://github.com/nwc6624) <br/>
 
-License
+
+## License
 This project is licensed under the MIT License - see the LICENSE file for details.  <br/>
