@@ -147,6 +147,8 @@ Included are images from 8/21/24. Current UI subject to change. <br/>
 ![image](https://github.com/user-attachments/assets/a622030c-40ed-4820-9d73-7325e24c3dec)   **Logged in user's options menu.** <br/>
 ![image](https://github.com/user-attachments/assets/ba9b628e-8122-4ed3-8321-971a2bc16de8)   **Top of the "About" page.** <br/>
 ![image](https://github.com/user-attachments/assets/45b835e8-2139-468d-b53f-f9b34b38a822)   **Bottom of the "About" page.**  <br/>
+![image](https://github.com/user-attachments/assets/175f7209-72a0-4822-9b7e-23da091d00f3)   **Current "Sign Up" page as of 8/21/2024.**  <br/>
+
 
 
 
