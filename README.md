@@ -7,6 +7,7 @@ This is the frontend for the ENMU Class Reviews application. It allows users to 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Project Structure](#project-structure)
+- [Technologies Used](#technologies-used)
 - [Available Scripts](#available-scripts)
 - [Dependencies](#dependencies)
 - [Contributing](#contributing)
@@ -20,22 +21,22 @@ To get started with the project, follow these steps:
    ```bash
    git clone https://github.com/your-username/enmu-class-reviews-frontend.git
    cd enmu-class-reviews-frontend
+   
 Install the dependencies:
-bash
-Copy code
-npm install
+
+**npm install**
+
 Usage
 To run the application locally, use the following command:
 
-bash
-Copy code
-npm start
+**npm start**
+
 This will start the development server and open the application in your default web browser. The app will reload if you make edits.
 
 ## Project Structure
 
 
-(NOTE: Front end components have been updated since 1.1)
+(NOTE: Front end components have been updated since 1.1, bac)
  
 **enmu-class-reviews/** <br/>
 **├── backend/**    <br/> 
@@ -80,8 +81,25 @@ This will start the development server and open the application in your default 
 **App.js:** &emsp;&emsp;  The main component that sets up the routing. <br/>
 **index.js:** &emsp;&emsp; The entry point for the React application. <br/>
 
+## Technologies Used
+
+**Python**: For backend development with Flask.<br/>
+**Flask**: For creating RESTful API services.<br/>
+**Flask-SQLAlchemy**: For ORM with SQLite or Azure SQL Database.<br/>
+**Flask-JWT-Extended**: For JWT authentication.<br/>
+**JavaScript**: For frontend development with React.js.<br/>
+**React.js**: For building the user interface.<br/>
+**Axios**: For making HTTP requests from the frontend to the backend.<br/>
+**JWT**: For user authentication and authorization. <br/>
+**Git**: For version control and source code management. <br/>
+**GitHub**: For hosting repositories and CI/CD with GitHub Actions. <br/>
+**Azure App Service**: For hosting the backend. --> For production use  <br/>
+**Azure Static Web Apps**: For hosting the frontend. --> For production use   <br/>
+**SQLite or Azure SQL Database: For database management.  -->Currently using SQLite for Flask demo  <br/>
+**Postman**: For testing API endpoints.  <br/>
+
 ## Available Scripts
-In the project directory, you can run:
+In the project front end directory, you can run:
 
 **npm start:** &emsp; Runs the app in the development mode. <br/>
 **npm build:** &emsp; Builds the app for production to the build folder. <br/>
