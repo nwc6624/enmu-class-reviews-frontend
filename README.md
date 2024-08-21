@@ -32,49 +32,28 @@ Copy code
 npm start
 This will start the development server and open the application in your default web browser. The app will reload if you make edits.
 
-
-## enmu-class-reviews-frontend/
-## │
-## ├── public/                  # Contains the static assets for the application.
-## ├── src/                     # Contains the source code for the application.
-## │    ├── components/          # Contains the React components for the application.
-## │   │   ├── SignUp.js
-│   │   ├── Login.js
-│   │   ├── Post.js
-│   │   ├── Discussion.js
-│   │   ├── NavBar.js
-│   ├── pages/               # Contains the React components for different pages.
-│   │   ├── Home.js
-│   │   ├── About.js
-│   ├── services/            # Contains the service modules for API calls.
-│   │   ├── authService.js
-│   ├── App.js               # The main component that sets up the routing.
-│   └── index.js             # The entry point for the React application.
-└── package.json
-
-public/: Contains the static assets for the application.
-src/: Contains the source code for the application.
-components/: Contains the React components for the application.
-pages/: Contains the React components for different pages.
-services/: Contains the service modules for API calls.
-App.js: The main component that sets up the routing.
-index.js: The entry point for the React application.
-Available Scripts
-In the project directory, you can run:
-
-npm start: Runs the app in the development mode.
-npm build: Builds the app for production to the build folder.
-npm test: Launches the test runner in the interactive watch mode.
-npm eject: Removes the single build dependency from your project. Note: this is a one-way operation. Once you eject, you can’t go back!
-Dependencies
-This project uses the following dependencies:
-
-axios: For making HTTP requests.
-react: The core React library.
-react-dom: Serves as the entry point to the DOM and server renderers for React.
-react-router-dom: Provides DOM bindings for React Router.
-Contributing
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-License
-This project is licensed under the MIT License - see the LICENSE file for details.
+## Project Structure
+ 
+enmu-class-reviews/ <br/>
+├── backend/        <br/> 
+│   ├── app/        <br/>
+│   │   ├── __init__.py          # Initializes the Flask <br/>   application and its configurations. <br\>
+│   │   ├── models.py            # Contains the database models for the application.   <br/>
+│   │   ├── routes.py            # Defines the API routes for the application. <br/>
+│   │   ├── config.py            # Contains configuration settings for the application. <br/>
+│   ├── migrations/              # Contains database migration files. <br/>
+│   ├── .env                     # Environment variables for the backend. <br/>
+│   ├── app.py                   # The entry point for the Flask application. <br/>
+│   ├── requirements.txt         # Lists the Python dependencies for the backend. <br/>
+│   ├── wsgi.py                  # WSGI entry point for deployment. <br/>
+├── frontend/                     # enmu-class-reviews-frontend/<br/>
+│   ├── public/                  # Contains the static assets for the application. <br/>
+│   │   ├── index.html           # The main HTML file for the application. <br/>
+│   ├── src/                     # Contains the source code for the application.  <br/>
+│   │   ├── components/          # Contains the React components for the application.  <br/>
+│   │   │   ├── SignUp.js        # Component for user sign-up. <br/>
+│   │   │   ├── Login.js         # Component for user login. <br/>
+│   │   │   ├── Post.js          # Component for displaying individual posts. <br/>
+│   │   │   ├── Discussion.js    # Component for displaying discussion threads.  <br/>
+│   │   │   ├── NavBar.js        # Component for the navigation bar.  <br/>
+│   │   ├── pages/               # Contains the React components for different pages.  <br/>
