@@ -32,26 +32,26 @@ Copy code
 npm start
 This will start the development server and open the application in your default web browser. The app will reload if you make edits.
 
-Project Structure
-lua
-Copy code
-enmu-class-reviews-frontend/
-|-- public/
-|-- src/
-|   |-- components/
-|   |   |-- SignUp.js
-|   |   |-- Login.js
-|   |   |-- Post.js
-|   |   |-- Discussion.js
-|   |   |-- NavBar.js
-|   |-- pages/
-|   |   |-- Home.js
-|   |   |-- About.js
-|   |-- services/
-|   |   |-- authService.js
-|   |-- App.js
-|   |-- index.js
-|-- package.json
+
+## enmu-class-reviews-frontend/
+## │
+## ├── public/                  # Contains the static assets for the application.
+## ├── src/                     # Contains the source code for the application.
+## │    ├── components/          # Contains the React components for the application.
+## │   │   ├── SignUp.js
+│   │   ├── Login.js
+│   │   ├── Post.js
+│   │   ├── Discussion.js
+│   │   ├── NavBar.js
+│   ├── pages/               # Contains the React components for different pages.
+│   │   ├── Home.js
+│   │   ├── About.js
+│   ├── services/            # Contains the service modules for API calls.
+│   │   ├── authService.js
+│   ├── App.js               # The main component that sets up the routing.
+│   └── index.js             # The entry point for the React application.
+└── package.json
+
 public/: Contains the static assets for the application.
 src/: Contains the source code for the application.
 components/: Contains the React components for the application.
