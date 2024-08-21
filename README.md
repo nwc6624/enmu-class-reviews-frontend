@@ -141,7 +141,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Screenshots
 
-Included are images from 8/21/24. Current UI subject to change. <br/>
+Included are images from 8/21/24 with dummy info via the backend database. Current UI subject to change. <br/>
 ![image](https://github.com/user-attachments/assets/b6a3b065-bbb1-4c20-9a6b-060a727004b9)   **Homepage with demo data.** <br/>
 ![image](https://github.com/user-attachments/assets/c3c1657b-5576-41fb-9c3d-0de3991f85b2)   **Course Review Page.** <br/>
 ![image](https://github.com/user-attachments/assets/a622030c-40ed-4820-9d73-7325e24c3dec)   **Logged in user's options menu.** <br/>
