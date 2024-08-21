@@ -4,14 +4,24 @@ This is the frontend for the ENMU Class Reviews application. It allows users to 
 
 ## Table of Contents
 
+- [Prerequisites](#Prerequisites)
 - [Installation](#installation)
-- [Usage](#usage)
 - [Project Structure](#project-structure)
 - [Technologies Used](#technologies-used)
 - [Available Scripts](#available-scripts)
 - [Dependencies](#dependencies)
 - [Contributing](#contributing)
 - [License](#license)
+
+## Prerequisites
+
+Before running the project, ensure you have the following installed:
+
+- **Python 3.x** (for the backend)
+- **Node.js** and **npm** (for the frontend)
+- **pip** (Python package installer)
+- **Virtualenv** (optional, for creating isolated Python environments)
+
 
 ## Installation
 
@@ -32,6 +42,8 @@ To run the application locally, use the following command:
 **npm start**
 
 This will start the development server and open the application in your default web browser. The app will reload if you make edits.
+
+
 
 ## Project Structure
 
